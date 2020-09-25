@@ -25,12 +25,12 @@ class TransactionsRepository {
   }
 
   public all(): object {
-    const transactionsResult = this.transactions;
-    const balanceResult = this.getBalance();
+    const { transactions } = this;
+    const balance = this.getBalance();
 
     return {
-      transactionsResult,
-      balanceResult,
+      transactions,
+      balance,
     };
   }
 
